@@ -47,7 +47,7 @@
 ├── runs_celebamaskhq/             # 실험 1 결과 (로그, 리포트, 시각화)
 ├── runs_celebamaskhq_hyperparam_tuning/ # 실험 2 결과
 ├── runs_celebamaskhq_hyperparam_tuning_V2/ # 실험 2-V2 결과
-└── .gitignore                     # .pt 등 대용량 파일 제외 설정
+└── .gitignore                     # .pt 등 대용량 파일 제외 설정(학습 코드 실행 시, 각 결과 폴더에 best.pt 및 last.pt 생성됨)
 ```
 
 ---
@@ -67,5 +67,5 @@
 
 ## 💻 Environment
 * **Framework: PyTorch 2.5.1 / torchvision 0.20.1**
-* **Hardware: NVIDIA RTX A6000 **
+* **Hardware: NVIDIA RTX A6000**
 * **OS: Ubuntu (via Python 3.10+)**
