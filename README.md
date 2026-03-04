@@ -3,7 +3,7 @@
 이 프로젝트는 사전학습된 **DeepLabV3-ResNet50** 모델을 활용하여 **CelebAMask-HQ** 데이터셋에 대해 얼굴 영역 세그멘테이션(Face Parsing)을 수행한 실습 기록입니다. 
 하이퍼파라미터 튜닝과 손실 함수 개선(Weighted Loss)을 통해 클래스 불균형 문제를 해결하고 정량적 성능을 분석하는 과정을 포함합니다.
 
-## 🚀 Key Features
+## Key Features
 * **Transfer Learning:** MS COCO로 사전학습된 DeepLabV3 모델을 19개의 얼굴 파트 클래스에 맞춰 재구성 및 Fine-tuning 하였습니다. 
 * **Optimization:** 학습 안정성을 위해 Learning Rate 스케줄링, Weight Decay 강화, Backbone Freeze 전략을 적용했습니다. 
 * **Imbalance Handling:** 데이터가 극히 적은 희소 클래스(`neck_l`, `ear_r`)의 탐지율을 높이기 위해 Inverse Frequency 기반의 **Weighted CrossEntropyLoss**를 실험했습니다.
@@ -11,7 +11,7 @@
 
 ---
 
-## 🏗️ Model Architecture
+## Model Architecture
 * **Model:** DeepLabV3 
 * **Backbone:** ResNet-50 
 * **Pretrained Weights:** `DeepLabV3_ResNet50_Weights.DEFAULT` (COCO)
@@ -19,7 +19,7 @@
 
 ---
 
-## 📊 Experiments & Results
+## Experiments & Results
 
 총 3가지 핵심 실험을 통해 최적의 설정을 도출했습니다.
 
@@ -37,7 +37,7 @@
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 ```text
 .
 ├── CelebAMask-HQ                  # 데이터셋
@@ -52,7 +52,7 @@
 
 ---
 
-## 🛠️ Dataset Setup
+## Dataset Setup
 
 본 리포지토리에는 용량 제한으로 인해 실제 데이터셋이 포함되어 있지 않습니다. 원활한 코드 실행을 위해 아래 가이드에 따라 데이터를 준비해 주세요.
 
@@ -65,7 +65,7 @@
 
 ---
 
-## 💻 Environment
+## Environment
 * **Framework: PyTorch 2.5.1 / torchvision 0.20.1**
 * **Hardware: NVIDIA RTX A6000**
 * **OS: Ubuntu (via Python 3.10+)**
